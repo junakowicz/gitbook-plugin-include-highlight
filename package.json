@@ -1,0 +1,17 @@
+{
+  "name": "gitbook-plugin-include-highlight",
+  "description": "Highlight code in referenced source files",
+   "main": "index.js",
+  "version": "0.1.0",
+  "engines": {
+    "gitbook": "*"
+  },
+  "dependencies": {
+    "q": "*"
+  },
+  "homepage": "https://github.com/junakowicz/gitbook-plugin-include-highlight",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/junakowicz/gitbook-plugin-include-highlight.git"
+  }
+}
