@@ -2,6 +2,11 @@ var path = require('path');
 var fs = require('fs');
 var Q = require('q');
 
+var extensionToLanguage = {
+	'feature': 'gherkin',
+	'pde': 'processing',
+};
+
 module.exports = {
 
 	hooks: {
@@ -15,19 +20,14 @@ module.exports = {
 			};
 
 			var getCodeLang = function(filepath) {
-
-				var lang ="";
+				var lang = "";
 				var suffix = filepath.split(".").pop();
-				if(suffix=="feature")
-					lang="gherkin";
-				else
-				{
-					lang = suffix;
-				}
+				
+				// look up if mapping from suffix to language exists,
+				// otherwise use `suffix`
+				lang = extensionToLanguage[suffix] || suffix;
 				return lang;
-
-				return path.join(dir, filename);
-			};
+		    };
 
 			var files = {};
 			// return a closure for saving the passed text
