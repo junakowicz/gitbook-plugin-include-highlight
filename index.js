@@ -5,12 +5,15 @@ var Q = require('q');
 var extensionToLanguage = {
 	'feature': 'gherkin',
 	'pde': 'processing',
+	'ps1': 'powershell',
 };
 
 module.exports = {
 
 	hooks: {
 		"page:before": function(page) {
+			var that = this;
+			var pluginConfig = that.options.pluginsConfig['include-highlight'] || {};
 			var re = /^!CODEFILE\s+(?:\"([^\"]+)\"|'([^']+)')\s*$/gm;
 
 			var dir = path.dirname(page.rawPath);
@@ -22,7 +25,14 @@ module.exports = {
 			var getCodeLang = function(filepath) {
 				var lang = "";
 				var suffix = filepath.split(".").pop();
-				
+
+				// naively merge config object with language lookup
+				if (pluginConfig.extensionToLanguage) {
+					for (var ext in pluginConfig.extensionToLanguage) {
+						extensionToLanguage[ext] = pluginConfig.extensionToLanguage[ext];
+					}
+				}
+
 				// look up if mapping from suffix to language exists,
 				// otherwise use `suffix`
 				lang = extensionToLanguage[suffix] || suffix;
