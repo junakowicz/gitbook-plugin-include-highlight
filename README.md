@@ -26,12 +26,23 @@ Add to your `book.json` plugin list:
 }
 ```
 
-
-##TODO
-Add convenient way to map file extensions that don't match syntax used in contents.
-
-Currently only Gherkin feature files used for example in Cucumber
+## Configuration
+You can map file extensions that don't match syntax used in contents by adding a mapping in your `book.json` plugins config section:
 ```
-almostGreat.feature
+"pluginsConfig": {
+  "include-highlight": {
+    "extensionToLanguage": {
+      "ps1": "powershell"
+    }
+  }
+}
 ```
-are mapped to use gherkin as highlight.
+
+The plugin is pre-configured with the following mappings:
+```
+{
+	'feature': 'gherkin',
+	'pde': 'processing',
+	'ps1': 'powershell'
+}
+```
