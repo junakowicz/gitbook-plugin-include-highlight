@@ -2,7 +2,7 @@
 	"name": "gitbook-plugin-include-highlight",
 	"description": "Plugin for Gitbook for highlighting referenced files code",
 	"main": "index.js",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"engines": {
 		"gitbook": "*"
 	},
