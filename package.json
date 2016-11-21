@@ -8,8 +8,7 @@
 	},
 	"dependencies": {
 		"q": "*",
-		"path":"*",
-		"fs":"*"
+		"path":"*"
 	},
 	"homepage": "https://github.com/junakowicz/gitbook-plugin-include-highlight",
 	"repository": {
