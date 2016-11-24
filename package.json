@@ -1,32 +1,32 @@
 {
-	"name": "gitbook-plugin-include-highlight",
-	"description": "Plugin for Gitbook for highlighting referenced files code",
-	"main": "index.js",
-	"version": "0.2.0",
-	"engines": {
-		"gitbook": "*"
-	},
-	"dependencies": {
-		"q": "*",
-		"path":"*"
-	},
-	"homepage": "https://github.com/junakowicz/gitbook-plugin-include-highlight",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/junakowicz/gitbook-plugin-include-highlight.git"
-	},
-	"bugs": {
-		"url": "https://github.com/junakowicz/gitbook-plugin-include-highlight/issues"
-	},
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"keywords": [
-		"gitbook",
-		"highlight",
-		"gherkin",
-		"include",
-		"syntax"
-	],
-	"author": "Andrzej Wower <andrzej@bitomer.com> (http://bitomer.com)"
+  "name": "gitbook-plugin-include-highlight",
+  "description": "Plugin for Gitbook for highlighting referenced files code",
+  "main": "index.js",
+  "version": "0.2.1",
+  "engines": {
+    "gitbook": "*"
+  },
+  "dependencies": {
+    "q": "*",
+    "path": "*"
+  },
+  "homepage": "https://github.com/junakowicz/gitbook-plugin-include-highlight",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/junakowicz/gitbook-plugin-include-highlight.git"
+  },
+  "bugs": {
+    "url": "https://github.com/junakowicz/gitbook-plugin-include-highlight/issues"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gitbook",
+    "highlight",
+    "gherkin",
+    "include",
+    "syntax"
+  ],
+  "author": "Andrzej Wower <andrzej@bitomer.com> (http://bitomer.com)"
 }
